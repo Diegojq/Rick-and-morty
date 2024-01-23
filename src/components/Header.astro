@@ -1,0 +1,33 @@
+---
+import Button from "../components/Button.astro";
+---
+
+<header>
+  <div class="container">
+    <figure>
+      <img src="/public/Logos/LogoA.svg" alt="Logo Rick" />
+    </figure>
+    <Button
+      className="botoncito"
+      icon="/public/icons/Heart.svg"
+      string="Lista de favoritos"
+    />
+  </div>
+</header>
+
+<style>
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .botoncito {
+    margin-left: 82.6rem;
+    display: flex;
+    align-items: center;
+    height: 3.2rem;
+    background-color: var(--portalBlue);
+    color: var(--portalWhite);
+    gap: 0.8rem;
+  }
+</style>

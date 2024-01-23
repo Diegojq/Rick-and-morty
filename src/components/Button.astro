@@ -1,0 +1,25 @@
+---
+interface Props {
+	icon: string;
+	string: string;
+	className?: string;
+}
+
+const { icon, string, className, ...res} = Astro.props;
+---
+<button class= {className}{...res}>
+	<img src={icon} alt=""> {string}
+</button>
+
+<style>
+	button{	
+		border: none;
+		font-size: 1.4rem;
+		border-radius: 3.2rem;
+	}
+
+	img{
+		width: 21px;
+		height: 18px;
+	}
+</style>
