@@ -3,21 +3,42 @@ interface Props {
   icon: string;
   string: string;
   className?: string;
+  variant?: `primary` | `secondary`;
 }
 
-const { icon, string, className, ...res } = Astro.props;
+// 13 con 22
+const { icon, string, className, variant = "primary", ...res } = Astro.props;
 ---
 
-<button class={className} {...res}>
+<button
+  class={`button button--${
+    variant === "primary" ? "primary" : "secondary"
+  } ${className}`}
+  {...res}
+>
   <img src={icon} alt="" />
   {string}
 </button>
 
 <style>
-  button {
+  .button {
+    display: flex;
+    align-items: center;
     border: none;
     font-size: 1.4rem;
     border-radius: 3.2rem;
+    padding: 0.4rem 0.6rem;
+    gap: 0.4rem;
+  }
+
+  .button--primary {
+    background-color: var(--portalBlue);
+    color: var(--portalWhite);
+  }
+
+  .button--secondary {
+    background-color: transparent;
+    color: var(--mortyGray);
   }
 
   img {

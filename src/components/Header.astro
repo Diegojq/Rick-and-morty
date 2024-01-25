@@ -2,37 +2,29 @@
 import Button from "../components/Button.astro";
 ---
 
-<header>
-  <div class="container">
+<div class="container">
+  <header>
     <figure>
       <img src="/public/Logos/LogoA.svg" alt="Logo Rick" />
     </figure>
     <Button
-      className="botoncito"
+      variant="primary"
       icon="/public/icons/Heart.svg"
       string="Lista de favoritos"
     />
-  </div>
-</header>
+  </header>
+</div>
 
 <style>
-  .container {
+  header {
+    max-width: 124rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 6.4rem;
+    justify-content: space-between;
+    margin: 6.4rem auto 0;
   }
 
   figure {
     margin: 0;
-  }
-  .botoncito {
-    margin-left: 86.2rem;
-    display: flex;
-    align-items: center;
-    height: 3.2rem;
-    background-color: var(--portalBlue);
-    color: var(--portalWhite);
-    gap: 0.8rem;
   }
 </style>

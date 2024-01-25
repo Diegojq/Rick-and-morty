@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Button from "../components/Button.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Rick and Morty">
   <Header />
   <section class="hero">
     <div class="left-container">
@@ -18,15 +18,11 @@ import Button from "../components/Button.astro";
       </p>
       <div class="darkMode-buttons">
         <Button
-          className="darkMode-buttons__dark"
+          variant="secondary"
           icon="/public/icons/Moon.svg"
           string="Oscuro"
         />
-        <Button
-          className="darkMode-buttons__light"
-          icon="/public/icons/Sun.svg"
-          string="Claro"
-        />
+        <Button variant="primary" icon="/public/icons/Sun.svg" string="Claro" />
       </div>
       <p class="left-container__description-2">
         ¡Wubba Lubba Dub Dub! Cuida tus ojos.
@@ -46,12 +42,9 @@ import Button from "../components/Button.astro";
 <style>
   .hero {
     display: flex;
-    justify-content: center;
-    border-bottom: 0.2rem solid var(--portalBlue);
-  }
-
-  .left-container {
-    margin-right: 48rem;
+    justify-content: space-between;
+    max-width: 124rem;
+    margin: 0 auto;
   }
 
   .left-container__title {
@@ -116,12 +109,6 @@ import Button from "../components/Button.astro";
   }
 
   main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: white;
-    font-size: 20px;
-    line-height: 1.6;
+    border-top: 0.2rem solid var(--portalBlue);
   }
 </style>
